@@ -1,0 +1,5 @@
+{
+  "name": "Lenticular Postcard Creator",
+  "description": "A web application to design and generate printable 3D lenticular postcards. Users can upload and order images, configure print settings, and preview the lenticular effect with an interactive 3D postcard.",
+  "requestFramePermissions": []
+}
