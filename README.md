@@ -20,6 +20,4 @@ View your app in AI Studio: https://ai.studio/apps/drive/1zH-4eEuz2IbGHENu_VT640
 
 ## Deployment
 
-This project is deployed using GitHub Pages. To deploy the website, run the following command:
-
-`npm run deploy`
+This project is automatically deployed to GitHub Pages whenever a commit is pushed to the `main` branch.
