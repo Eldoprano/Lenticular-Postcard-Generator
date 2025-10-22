@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { LenticularSettings } from '../types';
 
@@ -13,7 +12,7 @@ const ConfigurationForm: React.FC<ConfigurationFormProps> = ({ settings, setSett
     setSettings(prev => ({ ...prev, [name]: Number(value) }));
   };
 
-  const InputField: React.FC<{name: keyof LenticularSettings, label: string, unit: string}> = ({name, label, unit}) => (
+  const InputField: React.FC<{name: keyof LenticularSettings, label: string, unit: string, step?: string}> = ({name, label, unit, step = "1"}) => (
     <div>
         <label htmlFor={name} className="block text-sm font-medium text-light-fg dark:text-dark-fg">
             {label}
@@ -26,7 +25,8 @@ const ConfigurationForm: React.FC<ConfigurationFormProps> = ({ settings, setSett
                 value={settings[name]}
                 onChange={handleInputChange}
                 className="w-full px-3 py-2 bg-light-bg-alt dark:bg-dark-bg-alt border border-light-border dark:border-dark-border rounded-md focus:ring-light-primary dark:focus:ring-dark-primary focus:border-light-primary dark:focus:border-dark-primary"
-                min="1"
+                min="0.01"
+                step={step}
             />
             <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                 <span className="text-light-fg/50 dark:text-dark-fg/50 sm:text-sm">{unit}</span>
@@ -38,7 +38,7 @@ const ConfigurationForm: React.FC<ConfigurationFormProps> = ({ settings, setSett
 
   return (
     <div className="space-y-4 mb-6">
-      <InputField name="lpi" label="Lenses Per Inch" unit="LPI" />
+      <InputField name="lpi" label="Lenses Per Inch" unit="LPI" step="0.01" />
       <InputField name="dpi" label="Output Resolution" unit="DPI" />
       <div className="grid grid-cols-2 gap-4">
         <InputField name="width" label="Postcard Width" unit="in" />
