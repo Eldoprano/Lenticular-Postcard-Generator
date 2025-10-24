@@ -1,20 +1,22 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Lenticular Postcard Creator
 
-# Run and deploy your AI Studio app
+A web application to design and generate printable 3D lenticular postcards. Users can upload and order images, configure print settings, and preview the lenticular effect with an interactive 3D postcard.
 
-This contains everything you need to run your app locally.
+## Live Demo
 
-View your app in AI Studio: https://ai.studio/apps/drive/1zH-4eEuz2IbGHENu_VT640gcyZq6gyyE
+You can try the application here:
+[https://eldoprano.github.io/Lenticular-Postcard-Generator/](https://eldoprano.github.io/Lenticular-Postcard-Generator/)
 
-## Run Locally
+## Features
 
-**Prerequisites:**  Node.js
+-   **Image Upload & Reordering**: Upload multiple images and drag-and-drop to set the animation sequence.
+-   **Customizable Print Settings**: Adjust LPI (Lenses Per Inch), DPI, and postcard dimensions.
+-   **Interactive 3D Preview**: See a simulation of the lenticular effect by moving your mouse over the preview area.
+-   **2D Print Preview**: View the final interlaced image that will be printed.
+-   **LPI Calibration Sheet**: Generate a test sheet to find the exact LPI of your lenticular sheets.
+-   **Dark/Light Mode**: A comfortable viewing experience in any lighting.
 
+## Source Code
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+The source code for this project is available on GitHub:
+[https://github.com/Eldoprano/Lenticular-Postcard-Generator/](https://github.com/Eldoprano/Lenticular-Postcard-Generator/)
